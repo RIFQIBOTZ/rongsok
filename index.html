@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueprint Usaha Rongsok Logam 2025-2045</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2d2d2d 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header dengan animasi metal shine */
+        .header {
+            background: linear-gradient(45deg, #ff6b35, #f7931e, #ffd700, #ff6b35);
+            background-size: 400% 400%;
+            animation: metalShine 4s ease-in-out infinite;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes metalShine {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: sweep 3s infinite;
+        }
+
+        @keyframes sweep {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            text-align: center;
+            color: #000;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .header p {
+            text-align: center;
+            font-size: 1.3em;
+            color: #000;
+            margin-top: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Target section dengan hexagon design */
+        .target-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .target-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255,107,53,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255,215,0,0.1) 0%, transparent 50%);
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .target-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,107,53,0.3);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .target-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255,215,0,0.6);
+            box-shadow: 0 20px 40px rgba(255,107,53,0.2);
+        }
+
+        .target-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255,107,53,0.1), transparent);
+            animation: rotate 6s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .target-card h3 {
+            color: #ffd700;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .target-card p {
+            position: relative;
+            z-index: 2;
+            line-height: 1.6;
+        }
+
+        /* Phase sections dengan timeline industrial */
+        .phase-section {
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .phase-section:nth-child(even) {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+
+        .phase-section:nth-child(odd) {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+        }
+
+        .phase-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .phase-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #ff6b35, #ffd700, #ff6b35);
+            transform: translateX(-50%);
+        }
+
+        .phase-item {
+            position: relative;
+            margin: 50px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .phase-item:nth-child(odd) .phase-content {
+            margin-right: 60px;
+            text-align: right;
+        }
+
+        .phase-item:nth-child(even) .phase-content {
+            margin-left: 60px;
+            text-align: left;
+        }
+
+        .phase-content {
+            flex: 1;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255,107,53,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .phase-content:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,215,0,0.5);
+        }
+
+        .phase-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ff6b35, #ffd700);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #000;
+            z-index: 3;
+        }
+
+        .phase-title {
+            font-size: 2.2em;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .phase-focus {
+            color: #ff6b35;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .action-list {
+            margin: 20px 0;
+        }
+
+        .action-item {
+            background: rgba(255,255,255,0.03);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b35;
+            transition: all 0.3s ease;
+        }
+
+        .action-item:hover {
+            background: rgba(255,255,255,0.06);
+            border-left-color: #ffd700;
+            transform: translateX(5px);
+        }
+
+        .target-end {
+            background: linear-gradient(135deg, #ff6b35, #ffd700);
+            color: #000;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Tools section dengan card industrial */
+        .tools-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .tool-card {
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255,107,53,0.2);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card:hover {
+            transform: scale(1.05);
+            border-color: rgba(255,215,0,0.5);
+            box-shadow: 0 15px 30px rgba(255,107,53,0.3);
+        }
+
+        .tool-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #ff6b35, #ffd700);
+            border-radius: 50%;
+            color: #000;
+            font-weight: bold;
+            line-height: 40px;
+            margin-bottom: 15px;
+        }
+
+        .tool-card h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        /* Footer dengan metal texture */
+        .footer {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 3px solid #ff6b35;
+        }
+
+        .footer-content {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer h3 {
+            color: #ffd700;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .phase-timeline::before {
+                left: 30px;
+            }
+            
+            .phase-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .phase-item:nth-child(odd) .phase-content,
+            .phase-item:nth-child(even) .phase-content {
+                margin: 0 0 0 60px;
+                text-align: left;
+            }
+            
+            .phase-number {
+                left: 30px;
+            }
+            
+            .target-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ff6b35, #ffd700);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #ffd700, #ff6b35);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1> Blueprint Usaha Rongsok Logam</h1>
+            <p>Roadmap Strategis 2025-2045</p>
+        </div>
+    </div>
+
+    <div class="target-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5em; color: #ffd700; margin-bottom: 50px;"> Target Akhir</h2>
+            <div class="target-grid">
+                <div class="target-card">
+                    <h3> Penyedia Logam Skala Besar</h3>
+                    <p>Menjadi supplier utama logam daur ulang dengan kapasitas industri yang memadai untuk melayani kebutuhan pabrik-pabrik besar.</p>
+                </div>
+                <div class="target-card">
+                    <h3> Branding Korporat</h3>
+                    <p>Memiliki identitas perusahaan yang kuat dengan CV/PT yang diakui dan dipercaya di industri daur ulang logam.</p>
+                </div>
+                <div class="target-card">
+                    <h3> Akses Pasar Global</h3>
+                    <p>Kemampuan untuk setor langsung ke pabrik besar domestik dan melakukan ekspor ke pasar internasional.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="phase-section">
+        <div class="container">
+            <div class="phase-timeline">
+                <div class="phase-item">
+                    <div class="phase-number">1</div>
+                    <div class="phase-content">
+                        <h3 class="phase-title"> Fase 1: Fondasi</h3>
+                        <p class="phase-focus">Tahun 1-3 | Fokus: Belajar, Bangun Sistem, Tambah Jaringan</p>
+                        
+                        <div class="action-list">
+                            <div class="action-item"> Bantu bapak cari stok logam lewat mitra tukang servis, bengkel, dll</div>
+                            <div class="action-item"> Bangun catatan pemasok, jenis logam, harga beli/jual</div>
+                            <div class="action-item"> Posting aktif di WA, FB, buat brosur digital</div>
+                            <div class="action-item"> Mulai nyicil alat: timbangan digital, mesin pengupas kabel</div>
+                            <div class="action-item"> Simpan stok terpilah: tembaga, aluminium, kuningan</div>
+                            <div class="action-item"> Mulai bangun branding (logo, nama usaha, katalog WA)</div>
+                        </div>
+                        
+                        <div class="target-end">
+                             Target: Sistem sortir rapi, 10+ pemasok tetap, paham alur jual ke buyer pabrik
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item">
+                    <div class="phase-number">2</div>
+                    <div class="phase-content">
+                        <h3 class="phase-title"> Fase 2: Naik Kelas</h3>
+                        <p class="phase-focus">Tahun 4-7 | Fokus: Perbesar skala dan masuk ke pasar pabrik</p>
+                        
+                        <div class="action-list">
+                            <div class="action-item"> Sewa lahan kecil sebagai gudang sortir dan press</div>
+                            <div class="action-item"> Borong barang dari pengepul kecil</div>
+                            <div class="action-item"> Cari koneksi ke pabrik besar (langsung atau melalui pakde)</div>
+                            <div class="action-item"> Ikut pelatihan daur ulang / industri hijau</div>
+                            <div class="action-item"> Bentuk tim kecil sortir & angkut</div>
+                            <div class="action-item"> Mulai siapkan legalitas (CV atau UD)</div>
+                        </div>
+                        
+                        <div class="target-end">
+                             Target: Kirim 300kg-1 ton logam/minggu, buyer pabrik langsung, CV aktif dengan izin usaha
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item">
+                    <div class="phase-number">3</div>
+                    <div class="phase-content">
+                        <h3 class="phase-title"> Fase 3: Ekspansi dan Inovasi</h3>
+                        <p class="phase-focus">Tahun 8-15 | Fokus: Industri mandiri & digitalisasi</p>
+                        
+                        <div class="action-list">
+                            <div class="action-item"> Beli alat press, mesin sortir otomatis</div>
+                            <div class="action-item"> Bangun aplikasi kecil (order penjemputan rongsok)</div>
+                            <div class="action-item"> Bangun website + media sosial</div>
+                            <div class="action-item"> Rekrut 10+ pekerja lapangan</div>
+                            <div class="action-item"> Jalin kerja sama dengan pabrik daur ulang nasional</div>
+                            <div class="action-item"> Mulai bidik ekspor (Vietnam, India, China)</div>
+                        </div>
+                        
+                        <div class="target-end">
+                             Target: Omzet ratusan juta per bulan, gudang utama + cabang di kota lain, akses buyer luar negeri
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item">
+                    <div class="phase-number">4</div>
+                    <div class="phase-content">
+                        <h3 class="phase-title"> Fase 4: Industrialisasi</h3>
+                        <p class="phase-focus">Tahun 15-25+ | Fokus: Bangun pabrik kecil daur ulang / jadi perusahaan nasional</p>
+                        
+                        <div class="action-list">
+                            <div class="action-item"> Bangun fasilitas daur ulang sendiri</div>
+                            <div class="action-item"> Diversifikasi produk: buat logam siap pakai dari scrap</div>
+                            <div class="action-item"> Masuk ke proyek pemerintah/supply BUMN</div>
+                            <div class="action-item"> Kolaborasi dengan perusahaan ESG/green industry</div>
+                            <div class="action-item"> Bisa buka pelatihan & anak usaha</div>
+                        </div>
+                        
+                        <div class="target-end">
+                             Target: Menjadi "Raja Rongsok Indonesia" - Pabrik sendiri, ekspor langsung, impact sosial nyata
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tools-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5em; color: #ffd700; margin-bottom: 30px;"> Tools yang Bisa Dibantu Sekarang</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-number">1</div>
+                    <h4>Template Excel/Notion</h4>
+                    <p>Sistem catatan stok dan pemasok yang terorganisir</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-number">2</div>
+                    <h4>Brosur Digital</h4>
+                    <p>Materi promosi yang profesional dan menarik</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-number">3</div>
+                    <h4>Roadmap PDF Personal</h4>
+                    <p>Panduan khusus sesuai lokasi dan sumber logam</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-number">4</div>
+                    <h4>Daftar Buyer Pabrik</h4>
+                    <p>Kontak buyer scrap Jakarta/Jawa yang potensial</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-number">5</div>
+                    <h4>Branding Package</h4>
+                    <p>Ide nama usaha + logo AI yang keren dan berkesan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3> Visi Besar</h3>
+                <p>Dari rongsok menjadi emas, dari usaha kecil menjadi industri besar. Setiap logam bekas memiliki potensi untuk menjadi fondasi masa depan yang berkelanjutan.</p>
+            </div>
+            <p style="opacity: 0.7;">Blueprint Usaha Rongsok Logam © 2025 - Transformasi Dimulai dari Sekarang</p>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll animation untuk internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer untuk animasi fade-in
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observasi semua elemen yang perlu animasi
+        document.querySelectorAll('.phase-content, .target-card, .tool-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Efek parallax ringan untuk background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.target-section, .tools-section');
+            
+            parallaxElements.forEach(element => {
+                const speed = 0.3;
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+
+        // Counter animasi untuk angka-angka target
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 16);
+        }
+
+        // Hover effect untuk phase cards
+        document.querySelectorAll('.phase-content').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+                this.style.boxShadow = '0 15px 35px rgba(255, 107, 53, 0.2)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Dynamic color change untuk phase numbers berdasarkan scroll position
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            const phaseNumbers = document.querySelectorAll('.phase-number');
+            
+            phaseNumbers.forEach((number, index) => {
+                const rect = number.getBoundingClientRect();
+                const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+                
+                if (isVisible) {
+                    number.style.background = 'linear-gradient(45deg, #ffd700, #ff6b35)';
+                    number.style.transform = 'translateX(-50%) scale(1.1)';
+                } else {
+                    number.style.background = 'linear-gradient(45deg, #ff6b35, #ffd700)';
+                    number.style.transform = 'translateX(-50%) scale(1)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
